@@ -43,7 +43,9 @@
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    width: 30em;
+    /* make this width responsive */
+    width: 50%;
+    
 
     /* center this form */
     margin: 0 auto;
@@ -62,6 +64,7 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #ffffff;
+    background-color: #1B4242;
 }
 
 .btn{
