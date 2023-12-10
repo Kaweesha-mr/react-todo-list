@@ -4,7 +4,7 @@ import '../styles/styles.css';
 //onAdd is an function which is run whe Addtodo is executed
 const AddTodo = ({ onAdd }) => {
     //useState defualt value is empty that why ''
-    const [text, SetText] = useState('');
+    const [text, setText] = useState('');
 
 
     //this function is called when form is submitted
@@ -13,8 +13,9 @@ const AddTodo = ({ onAdd }) => {
         e.preventDefault();
 
         if (text.trim() !== '') {
-            onAdd(text);
-            SetText('');
+            const newTodo = { id: Date.now(), text: text, completed: false };
+            onAdd(newTodo);
+            setText('');
         }
     }
 
@@ -24,7 +25,7 @@ const AddTodo = ({ onAdd }) => {
                 className='addTodoInput'
                 placeholder='Add Todo'
                 value={text}
-                onChange={(e) => SetText(e.target.value)
+                onChange={(e) => setText(e.target.value)
                 } />
 
             <input type="submit"

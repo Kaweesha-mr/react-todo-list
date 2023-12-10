@@ -126,3 +126,10 @@
     line-height: 1.5;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
+
+.checkbox{
+    /* style the checkbox */
+    margin-right: 1rem;
+    cursor: pointer;
+
+}

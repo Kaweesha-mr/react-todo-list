@@ -17,15 +17,12 @@ function App() {
 
   const handleToggle = (id) => {
     setTodos((prevTodos) =>
-      prevTodos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
+        prevTodos.map((todo) =>
+            todo.id === id ? { ...todo, completed: !todo.completed } : todo
+        )
     );
-  };
+};
 
-
-
-  
   return (
     <div className="App">
       <h1 className='title'>React Todo List</h1>
